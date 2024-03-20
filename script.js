@@ -27,13 +27,14 @@ function draw() {
   obj2.display();
   
   // capture the distance of the mouse from each object
-  let mouse1 = dist(mouseX, mouseY, obj1.x, obj1.y); 
-  let mouse2 = dist(mouseX, mouseY, obj2.x, obj2.y); 
+  let mouse1 = dist(mouseX, mouseY, obj1.x, obj1.y);
+  let mouse2 = dist(mouseX, mouseY, obj2.x, obj2.y);
 
   if(mouse1 < 50) { // first, see if the mouse is within range
     if(mouseIsPressed){
       // spin object 1 by calling its spin() method
       // you will have to create that method inside the myClass constructor ...
+    obj1.spin();
     } else {
       obj1.reset(); // the reset function is done for you
     }
